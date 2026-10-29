@@ -270,3 +270,4 @@ export const InstagramCarouselCard: React.FC<InstagramCarouselCardProps> = ({
     </div>
   );
 };
+

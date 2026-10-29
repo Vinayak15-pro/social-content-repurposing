@@ -129,3 +129,4 @@ async def fetch_url_content(url: str) -> SafeUrlFetchResponse:
         url=url,
         word_count=count_words(cleaned_content)
     )
+

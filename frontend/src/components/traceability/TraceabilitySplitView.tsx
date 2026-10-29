@@ -384,3 +384,4 @@ export const TraceabilitySplitView: React.FC<TraceabilitySplitViewProps> = ({
     </div>
   );
 };
+

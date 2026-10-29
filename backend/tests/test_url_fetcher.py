@@ -23,3 +23,4 @@ def test_url_fetcher_blocks_file_scheme():
     with pytest.raises(HTTPException) as exc:
         validate_url_safe("file:///etc/passwd")
     assert exc.value.status_code == 400
+

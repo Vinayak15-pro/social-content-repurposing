@@ -90,3 +90,4 @@ def test_full_campaign_generation_lifecycle():
         exp_resp = client.get(f"/api/campaigns/{campaign_id}/export?format={fmt}")
         assert exp_resp.status_code == 200
         assert len(exp_resp.text) > 100
+

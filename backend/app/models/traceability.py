@@ -20,3 +20,4 @@ class ClaimVerification(BaseModel):
     verification_explanation: str
     is_creative_suggestion: bool = False
     suggested_fix: Optional[str] = None
+

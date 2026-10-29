@@ -20,3 +20,4 @@ The cutover was executed over a 6-week phased rollout using canary routing with 
 ### Architecture Highlights & Lessons Learned
 The engineering leadership emphasized three core takeaways for peer financial institutions:
 First, never attempt a 'big-bang' cutover on transaction rails. By using shadow traffic replay for 90 consecutive days, the team identified 17 edge-case idempotency bugs before handling live customer funds. Second, strict schema governance in Protobuf prevented backward compatibility breaks across 38 microservices. Finally, establishing automated circuit-breakers and adaptive rate-limiting protected downstream card networks during unpredictable partner API outages.
+

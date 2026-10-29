@@ -62,3 +62,4 @@ def count_words(text: str) -> int:
     if not text:
         return 0
     return len(re.findall(r"\b\w+\b", text))
+

@@ -96,3 +96,4 @@ class GeminiService:
             return None
 
 gemini_service = GeminiService()
+

@@ -12,3 +12,4 @@ def test_health_endpoint():
     assert "version" in data
     assert "gemini" in data
     assert "configured" in data["gemini"]
+

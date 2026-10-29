@@ -57,3 +57,4 @@ class BrandViolation(BaseModel):
     explanation: str
     recommendation: str
     severity: str = "warning"  # 'error', 'warning', 'info'
+

@@ -422,3 +422,4 @@ For public URL ingestion, RepurposeIQ applies rigorous **Server-Side Request For
 ### Gemini API Key Issues
 - **Error**: API reports fallback to deterministic mode
 - **Solution**: Check `backend/.env`. Ensure `GEMINI_API_KEY` is set without quotation marks or extra spaces. Run `GET /health` to verify status. Note that the application will run seamlessly with full traceability in deterministic mode even without an API key!
+

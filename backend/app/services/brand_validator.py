@@ -132,3 +132,4 @@ def validate_brand_compliance(
             )
 
     return violations
+

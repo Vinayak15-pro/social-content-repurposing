@@ -268,3 +268,4 @@ export const LinkedInCard: React.FC<LinkedInCardProps> = ({
     </div>
   );
 };
+

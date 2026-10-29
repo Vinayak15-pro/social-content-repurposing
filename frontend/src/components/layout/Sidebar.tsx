@@ -186,3 +186,4 @@ export const Sidebar: React.FC<SidebarProps> = ({
     </aside>
   );
 };
+

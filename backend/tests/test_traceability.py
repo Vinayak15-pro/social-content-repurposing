@@ -63,3 +63,4 @@ def test_traceability_detects_creative_suggestion():
 
     assert result.status == TraceabilityStatus.CREATIVE_SUGGESTION
     assert result.is_creative_suggestion is True
+

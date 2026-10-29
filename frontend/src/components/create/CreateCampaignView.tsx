@@ -627,3 +627,4 @@ export const CreateCampaignView: React.FC<CreateCampaignViewProps> = ({
     </div>
   );
 };
+

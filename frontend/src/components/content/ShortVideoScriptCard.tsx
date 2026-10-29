@@ -274,3 +274,4 @@ export const ShortVideoScriptCard: React.FC<ShortVideoScriptCardProps> = ({
     </div>
   );
 };
+

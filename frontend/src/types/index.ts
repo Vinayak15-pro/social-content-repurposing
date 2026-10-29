@@ -181,3 +181,4 @@ export interface SafeUrlFetchResponse {
   url: string;
   word_count: number;
 }
+

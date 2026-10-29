@@ -48,3 +48,4 @@ def test_brand_validator_clean_content():
     # Should have no prohibited word or required phrase errors
     serious_errors = [v for v in violations if v.severity == "error"]
     assert len(serious_errors) == 0
+

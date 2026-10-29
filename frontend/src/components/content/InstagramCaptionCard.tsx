@@ -245,3 +245,4 @@ export const InstagramCaptionCard: React.FC<InstagramCaptionCardProps> = ({
     </div>
   );
 };
+

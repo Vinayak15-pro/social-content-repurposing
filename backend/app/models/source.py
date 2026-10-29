@@ -32,3 +32,4 @@ class SourceAnalysisResponse(BaseModel):
     paragraphs: List[SourceParagraph]
     extracted_facts: List[SourceFact]
     key_entities: List[str]
+

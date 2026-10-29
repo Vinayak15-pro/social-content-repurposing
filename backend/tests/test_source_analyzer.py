@@ -36,3 +36,4 @@ def test_source_analysis_fact_extraction():
         assert fact.source_paragraph_index >= 0
         assert len(fact.source_excerpt) > 0
         assert fact.source_excerpt in result.paragraphs[fact.source_paragraph_index].text or fact.fact in result.paragraphs[fact.source_paragraph_index].text
+

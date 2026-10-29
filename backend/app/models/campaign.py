@@ -77,3 +77,4 @@ class Campaign(BaseModel):
     traceability_report: List[ClaimVerification] = Field(default_factory=list)
     brand_violations: List[BrandViolation] = Field(default_factory=list)
     user_edits: Dict[str, Any] = Field(default_factory=dict)
+

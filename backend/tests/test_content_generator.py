@@ -51,3 +51,4 @@ def test_platform_content_generation():
     for scene in content.short_video_script.scenes:
         assert len(scene.spoken_narration) > 0
         assert len(scene.on_screen_text) > 0
+

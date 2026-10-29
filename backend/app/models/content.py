@@ -53,3 +53,4 @@ class GeneratedContent(BaseModel):
     instagram_caption: Optional[InstagramCaption] = None
     instagram_carousel: Optional[InstagramCarousel] = None
     short_video_script: Optional[ShortVideoScript] = None
+

@@ -134,3 +134,4 @@ def export_to_csv(campaign: Campaign) -> str:
             c.suggested_fix or ""
         ])
     return output.getvalue()
+

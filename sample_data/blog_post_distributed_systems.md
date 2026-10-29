@@ -18,3 +18,4 @@ When running Multi-Raft clusters with more than 10,000 active ranges:
 - Coalesce heartbeats: Group ping messages destined for the same target server into unified batches to prevent OS thread thrashing.
 - Separate WAL from state storage: Host the write-ahead log on ultra-low latency NVMe drives while keeping steady-state SST files on high-density SSD arrays.
 - Calibrate election timeouts: In geo-distributed clusters with cross-region round trips of 70ms, setting election timeouts below 1,000ms creates cascade re-election storms.
+

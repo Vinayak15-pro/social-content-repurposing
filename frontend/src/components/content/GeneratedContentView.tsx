@@ -224,3 +224,4 @@ export const GeneratedContentView: React.FC<GeneratedContentViewProps> = ({
     </div>
   );
 };
+
