@@ -1,0 +1,22 @@
+# AuraPay Engineering Case Study: High-Scale Cloud Modernization
+
+### Executive Summary
+AuraPay is a tier-1 digital payments platform serving over 4.2 million active merchant accounts across North America and Europe. In Q3 2024, AuraPay completed a landmark modernization initiative: migrating their monolithic core processing engine to an event-driven microservices architecture hosted on multi-region AWS and Kubernetes.
+
+### The Challenge: Monolithic Bottlenecks at Scale
+Before the initiative, AuraPay processed approximately 1.8 million daily card transactions, with holiday peak volumes surging to 6,200 transactions per second (TPS). The legacy Java monolith ran on managed relational databases with severe locking contention. P99 payment latency frequently degraded to 2.4 seconds during traffic spikes, and scheduled database maintenance windows required 45 minutes of scheduled downtime every month. Furthermore, compliance audits against PCI-DSS Level 1 and SOC2 Type II required weeks of manual validation due to lack of audit trail isolation.
+
+### The Modernization Strategy
+Over an 8-month period, AuraPay's platform team partnered with CloudScale Architects to re-architect transaction routing. The new architecture decoupled authorization from settlement using an asynchronous event mesh built on Apache Kafka, with persistent storage backed by distributed multi-region CockroachDB. Every microservice was containerized, deployed across three independent AWS availability zones, and governed by strict mutual TLS (mTLS) with automated certificate rotation.
+
+### Key Measurable Outcomes
+The cutover was executed over a 6-week phased rollout using canary routing with zero customer-facing downtime. Final production benchmarks demonstrated:
+1. Infrastructure operating costs decreased by 42%, saving $1.4 million annually.
+2. P99 transaction latency dropped from 2,400ms down to 180ms, representing a 92.5% latency improvement.
+3. Sustained throughput scaled to 18,500 TPS during Black Friday 2024 without a single failed authorization queue.
+4. Deployment frequency increased from bi-weekly releases to an average of 14 production deployments per day.
+5. Achieved full SOC2 Type II certified compliance and continuous automated PCI-DSS audit posture.
+
+### Architecture Highlights & Lessons Learned
+The engineering leadership emphasized three core takeaways for peer financial institutions:
+First, never attempt a 'big-bang' cutover on transaction rails. By using shadow traffic replay for 90 consecutive days, the team identified 17 edge-case idempotency bugs before handling live customer funds. Second, strict schema governance in Protobuf prevented backward compatibility breaks across 38 microservices. Finally, establishing automated circuit-breakers and adaptive rate-limiting protected downstream card networks during unpredictable partner API outages.
